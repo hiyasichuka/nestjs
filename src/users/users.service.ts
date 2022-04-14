@@ -3,14 +3,13 @@ import { CreateUserDto } from './dto/create-user.dto';
 
 @Injectable()
 export class UsersService {
-
   users: CreateUserDto[] = [];
 
   create(user: CreateUserDto) {
-    this.users.push(user)
+    this.users.push(user);
   }
 
   findAll() {
-    return this.users
+    return this.users;
   }
 }

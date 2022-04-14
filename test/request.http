@@ -20,3 +20,13 @@ Content-Type: application/json
 "name":"Tom",
 "password":"12345678"
 }
+
+###
+POST http://localhost:3000/cats HTTP/1.1
+Content-Type: application/json
+
+{
+"name":"Tom",
+"age":3,
+"breed":"Aoki"
+}
