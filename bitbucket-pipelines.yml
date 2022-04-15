@@ -6,10 +6,10 @@
 image: node:16
 
 pipelines:
-  default:
-    - parallel:
+  branches:
+    develop:
         - step:
-            name: Build and Test
+            name: build
             caches:
               - node
             script:
@@ -18,7 +18,7 @@ pipelines:
               - npm run lint
               - npm run format
         - step:
-            name: Deploy to 
+            name: deploy 
             deployment: test
             # trigger: manual  # Uncomment to make this a manual deployment.
             script:
