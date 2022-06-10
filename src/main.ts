@@ -4,9 +4,12 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   console.log('start app');
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
-  //
+  // For Security
+  app.disable('x-powered-by');
+
+  // For Api document
   const config = new DocumentBuilder()
     .setTitle('Cats example')
     .setDescription('The cats API description')
