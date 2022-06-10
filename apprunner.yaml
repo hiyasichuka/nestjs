@@ -1,0 +1,14 @@
+version: 1.0
+runtime: node16
+build:
+  commands:
+    build:
+      - yarn
+      - yarn build
+  env:
+    - name: HOGE
+      value: 'hoge'
+run:
+  command: yarn start:prod
+  network:
+    port: 3000
