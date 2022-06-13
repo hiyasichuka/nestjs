@@ -3,12 +3,12 @@ runtime: node16
 build:
   commands:
     build:
-      - yarn
-      - yarn build
+      - npm
+      - npm run build
   env:
     - name: HOGE
       value: 'hoge'
 run:
-  command: yarn start:prod
+  command: npm run start:prod
   network:
     port: 3000
